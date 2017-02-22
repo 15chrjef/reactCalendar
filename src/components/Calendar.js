@@ -2,6 +2,7 @@ import React from 'react';
 import DayNames from './DayNames.js'
 import Week from './Week';
 import FontAwesome from 'react-fontawesome';
+import '../App.css';
 
 export default class Calendar extends React.Component{
 	constructor(props){
@@ -24,7 +25,7 @@ export default class Calendar extends React.Component{
 	renderWeeks(){
 		var weeks = [],
 		done = false,
-		date = this.state.month.clone().startOf('month').add('w', -1).day('Sunday'),
+		date = this.state.month.clone().startOf('month').day('Sunday'),
 		monthIndex = date.month(),
 		count = 0;
 
@@ -39,7 +40,7 @@ export default class Calendar extends React.Component{
 				/>
 			);
 			date.add(1, 'w');
-			done = count++ > 2 & monthIndex !== date.month();
+			done = count++ > 2 && monthIndex !== date.month();
 			monthIndex = date.month
 		}
 
@@ -51,7 +52,15 @@ export default class Calendar extends React.Component{
 	render(){
 		return(
 			<div>
-				<FontAwesome name='rocket' onClick={this.previous}         size='2x'
+			 <FontAwesome
+        className='super-crazy-colors'
+        name='rocket'
+        size='2x'
+        spin
+        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+				onClick={this.previous}
+      />
+				<FontAwesome name='rocket'          size='2x'
         style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)', width: '100px', height: '100px' }}
 
 />
