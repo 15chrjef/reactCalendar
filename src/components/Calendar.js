@@ -3,7 +3,8 @@ import DayNames from './DayNames.js'
 import Week from './Week';
 import FontAwesome from 'react-fontawesome';
 import '../App.css';
-
+import AngleLeft from 'react-icons/lib/fa/angle-left' ;
+import AngleRight from 'react-icons/lib/fa/angle-right';
 export default class Calendar extends React.Component{
 	constructor(props){
 		super(props)
@@ -52,20 +53,17 @@ export default class Calendar extends React.Component{
 	render(){
 		return(
 			<div>
-			 <FontAwesome
-        className='super-crazy-colors'
-        name='rocket'
-        size='2x'
-        spin
-        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-				onClick={this.previous}
-      />
-				<FontAwesome name='rocket'          size='2x'
-        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)', width: '100px', height: '100px' }}
-
-/>
+			<div style={{display:'flex', justifyContent:'center', alignItem:'center'}}>
+				<AngleLeft 
+					onClick={this.previous.bind(this)}
+					style={{height: '50px', cursor: 'pointer', width: '50px'}}
+					/>
 				{this.renderMonthLabel()}
-				<i className='fa fa-angle-right' onClick={this.next}></i>
+				<AngleRight 
+					onClick={this.next.bind(this)}
+					style={{height: '50px', cursor: 'pointer', width: '50px'}}
+				/>
+			</div>
 				<DayNames/>
 				{this.renderWeeks()}
 			</div>
