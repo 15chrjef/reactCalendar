@@ -9,9 +9,12 @@ class App extends Component {
     this.state ={ selected: date()}
   }
   select(day){
+    								console.log('selected', day.date._d)
+
 		this.setState({
       selected: day.date
     })
+    console.log(day.date)
 	}
   render() {
     return (

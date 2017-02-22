@@ -1,0 +1,86 @@
+.names>span {
+	color:#2875C7;
+	font-weight:bold;
+}
+
+.different-month {
+		color:#C0C0C0;
+}
+
+.today {
+		background:#E3F2FF;
+}
+
+div.week {
+        float:left;
+        width:100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+}
+
+span { 
+		float:left;
+		width:100%;
+		font-weight:bold;
+		text-transform:uppercase;
+ 		box-sizing:border-box;
+    -moz-box-sizing:border-box;		
+		padding-left:50px;
+		text-align:center;
+		padding-right:40px;
+		color:inherit;
+}
+
+   i.fa-angle-left {
+            text-align:left;
+        }
+        
+        i.fa-angle-right {
+            text-align:right;
+            margin-left:-40px;
+        }
+
+i {
+		float:left;
+		width:40px;
+		height: 40px;
+		color: blue;
+		font-size:1.125em;
+		font-weight:bold;
+		position:relative;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+				padding:0 10px;
+		cursor:pointer;
+}
+
+div.header {
+        float:left;
+        width:100%;
+        background:#2875C7;
+        height:40px;
+        color:white;
+}
+
+span.day {
+	/*float: left;*/
+	width:10%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	border:solid 1px #CCC;
+	font-size:0.75em;
+	text-align:center;
+	height:30px;
+	line-height:30px ;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+.selected{
+		background-color:blue;
+		color:white;
+		
+
+}
